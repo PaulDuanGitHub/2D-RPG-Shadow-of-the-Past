@@ -31,17 +31,34 @@ public class PlayerMovement : MonoBehaviour
             if (moveInput.x > 0)
             {
                 spriteRenderer.flipX = false;
+                gameObject.BroadcastMessage("IsFacingRight", true);
             }
             if (moveInput.x < 0)
             {
                 spriteRenderer.flipX = true;
+                gameObject.BroadcastMessage("IsFacingRight", false);
             }
         }
+    }
+
+    private void OnFire()
+    {
+        animator.SetTrigger("attacking");
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
         rb.AddForce(moveInput * moveSpeed);
+    }
+
+    void OnDamage()
+    {
+        animator.SetTrigger("isDamaged");
+    }
+
+    void OnDie()
+    {
+        animator.SetTrigger("isDead");
     }
 }
