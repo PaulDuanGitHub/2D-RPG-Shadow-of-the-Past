@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackForce: 100
+  attackPower: 3
 --- !u!1 &5465195157090616017
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,3 +383,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  maxHealth: 0

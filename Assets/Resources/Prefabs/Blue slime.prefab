@@ -142,7 +142,7 @@ MonoBehaviour:
   - {x: -0.4581604, y: -0.49533176, z: 0}
   m_ShapePathHash: 206444583
   m_Mesh: {fileID: 0}
-  m_InstanceId: 44708
+  m_InstanceId: 146398
   m_LocalBounds:
     m_Center: {x: 0.0010986328, y: -0.14392471, z: 0}
     m_Extent: {x: 0.570961, y: 0.35140705, z: 0}
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectedObjs: {fileID: 0}
-  viewRadius: 6
+  viewRadius: 12
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -261,8 +261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff58091f631479e408bf6917a52a2950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  maxHealth: 3
+  health: 15
+  maxHealth: 15
 --- !u!1001 &577832918524807269
 PrefabInstance:
   m_ObjectHideFlags: 0

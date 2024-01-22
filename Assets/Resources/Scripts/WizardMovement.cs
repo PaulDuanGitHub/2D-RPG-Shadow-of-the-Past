@@ -118,6 +118,7 @@ public class WizardMovement : MonoBehaviour
     void OnDie()
     {
         animator.SetTrigger("isDead");
+        PlayerPrefs.SetInt("WizardStatus", 0);
     }
 }
 

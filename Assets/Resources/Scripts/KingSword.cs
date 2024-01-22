@@ -37,7 +37,7 @@ public class KingSword : MonoBehaviour
             Vector3 _position = transform.parent.position;
             Vector2 direction = collider.transform.position - _position;
 
-            attackPower = 1;
+            attackPower = 3;
             damageable.OnHit(attackPower, direction * knockbackForce);
         }
     }

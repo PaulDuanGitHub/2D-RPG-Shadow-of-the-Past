@@ -116,5 +116,6 @@ public class KingMovement : MonoBehaviour
     void OnDie()
     {
         animator.SetTrigger("isDead");
+        PlayerPrefs.SetInt("KingStatus", 0);
     }
 }

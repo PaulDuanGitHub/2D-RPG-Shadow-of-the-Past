@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerSword : MonoBehaviour
 {
     Vector3 position;
-    private int attackPower;
     public int knockbackForce;
+    public int attackPower;
 
 
 
@@ -37,7 +37,6 @@ public class PlayerSword : MonoBehaviour
             Vector3 _position = transform.parent.position;
             Vector2 direction = collider.transform.position - _position;
 
-            attackPower = 1;
             damageable.OnHit(attackPower, direction * knockbackForce);
         }
     }

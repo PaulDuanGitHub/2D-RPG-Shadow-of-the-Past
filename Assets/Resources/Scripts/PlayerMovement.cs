@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isRunning", false);
         }
-        else
+        else if (PlayerPrefs.GetInt("isFrozen") != 1)
         {
             animator.SetBool("isRunning", true);
             if (moveInput.x > 0)
@@ -43,13 +43,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnFire()
     {
-        animator.SetTrigger("attacking");
+        if (PlayerPrefs.GetInt("isFrozen") != 1)
+        {
+            animator.SetTrigger("attacking");
+        }
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
-        rb.AddForce(moveInput * moveSpeed);
+        int isFrozen = PlayerPrefs.GetInt("isFrozen");
+        if (isFrozen != 1) 
+        {
+            rb.AddForce(moveInput * moveSpeed);
+        }
     }
 
     void OnDamage()
@@ -60,5 +67,6 @@ public class PlayerMovement : MonoBehaviour
     void OnDie()
     {
         animator.SetTrigger("isDead");
+        PlayerPrefs.SetInt("PlayerStatus", 0);
     }
 }

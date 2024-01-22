@@ -28,7 +28,7 @@ public class DamageableCharacter : MonoBehaviour, IDamageable
             else
             {
                 gameObject.BroadcastMessage("OnDamage");
-                gameObject.BroadcastMessage("BarFiller",health/maxHealth);
+                gameObject.BroadcastMessage("BarFiller",health / maxHealth);
             }
         }
     }

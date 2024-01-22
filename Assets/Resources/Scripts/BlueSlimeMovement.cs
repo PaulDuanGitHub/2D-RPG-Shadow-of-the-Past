@@ -79,6 +79,7 @@ public class BlueSlimeMovement : MonoBehaviour
     void OnDie()
     {
         animator.SetTrigger("isDead");
+        PlayerPrefs.SetInt("TotalSlimes", PlayerPrefs.GetInt("TotalSlimes") - 1);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
